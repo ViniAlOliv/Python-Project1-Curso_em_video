@@ -6,4 +6,14 @@
 
 Seu programa também deverá mostrar o tempo que falta ou que passou do prazo
 '''
+anoNasc = int(input('Diga o ano de seu nascimento: '))
+anoAtual = 2023
 
+idade = anoAtual - anoNasc
+print('Você tem {} anos!'.format(idade))
+if (idade > 18):
+    print('Opa, já passou o tempo de alistamento')
+elif (idade == 18):
+    print('Está na hora de se alistar!')
+else:
+    print('Você ainda não tem idade para se alistar')
