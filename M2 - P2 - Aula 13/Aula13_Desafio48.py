@@ -1,3 +1,9 @@
 #Faça um programa que calcule a soma entre todos os números ímpares que são múltiplos 
 # de 3 e que se encontram no intervalo de 1 até 500
-
+soma = 0
+cont = 0
+for conta in range(1,500+1,2):
+        if (conta % 3 == 0):
+            soma = soma + conta
+            cont = cont + 1
+print('A soma de todos os {} valores solicidades foi de {}'.format(cont,soma))
