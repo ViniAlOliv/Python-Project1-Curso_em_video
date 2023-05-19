@@ -10,17 +10,17 @@ for pessoa in range (1, 4 + 1):
     print('*******Pessoa {}*******'.format(pessoa))
     nome = str(input('Diga seu nome: '))
     idade = int(input('Diga sua idade: '))
-    sexo = str(input('Diga seu sexo (Masc) ou (Fem): '))
+    sexo = str(input('Diga seu sexo M - Masc ou F- Fem: '))
 
     somaIdade = idade + somaIdade
-    if (sexo == 'Masc' and idade > idMaisVelho):
+    if (sexo == 'M' and idade > idMaisVelho):
         idMaisVelho = idade
         nomeMaisVelho = nome
     
-    if (sexo == 'Fem' and idade < 20):
+    if (sexo == 'F' and idade < 20):
         qtMulheres = qtMulheres + 1
         
 print('=-=-'*13)
 print('A média de idade é: {}'.format(somaIdade/4))
-print('O nome do home mais velho é {}'.format(nomeMaisVelho))
+print('O nome do homem mais velho é {}'.format(nomeMaisVelho))
 print('Mulheres com menos de 20 anos: {}'.format(qtMulheres))
