@@ -3,14 +3,18 @@
 #mostrando no final quantos palpites foram necessários para vencer
 #OBS: Agora tenho várias chances até acertar
 
-'''Código antigo
 import random
-
-numero = random.randint(0,5)
-perg = int(input('Diga um número de 0 a 5: '))
-if (perg == numero):
-    print('Você acertou! Disse {} e era {}'.format(perg, numero))
-else:
-    print('Você errou,  Disse {} e era {}'.format(perg, numero))
-'''
-
+palp = 0
+perg = 11
+numero = random.randint(0,10)
+while (perg != numero):
+    perg = int(input('Diga um número de 0 a 10: '))
+    if (perg < 0) or (perg > 10):
+        print('Número fora do range de valores. Digite novamente')
+    elif (perg > numero):
+        print('É menor...Você errou, tente novamente')
+    elif (perg < numero):
+        print('É maior...Você errou, tente novamente')
+    palp = palp + 1
+    
+print('Você acertou. O número era {} e você precisou de {} palpites para acertar'.format(numero,palp))
